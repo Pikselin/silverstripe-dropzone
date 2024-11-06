@@ -1189,6 +1189,7 @@ class FileAttachmentField extends FileField
      */
     public function TemplateThumbnailSize()
     {
+	    return 64;
         $w = $this->getSelectedThumbnailWidth();
 
         foreach ($this->config()->icon_sizes as $size) {
