@@ -1088,7 +1088,7 @@ class FileAttachmentField extends FileField
      */
     public function RootThumbnailsDir()
     {
-        return $this->getSetting('thumbnailsDir') ?: 'resources/' . DROPZONE_DIR . '/images/file-icons';
+        return $this->getSetting('thumbnailsDir') ?: '_resources/' . DROPZONE_DIR . '/images/file-icons';
     }
 
     /**
