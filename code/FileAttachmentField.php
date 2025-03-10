@@ -1345,7 +1345,7 @@ class FileAttachmentField extends FileField
      */
     protected function getDefaults()
     {
-        $file_path = BASE_PATH . '/' . DROPZONE_DIR . '/' . $this->config()->default_config_path;
+        $file_path = BASE_PATH . '/_resources/vendor/unclecheese/' . DROPZONE_DIR . '/' . $this->config()->default_config_path;
         if (!file_exists($file_path)) {
             throw new Exception("FileAttachmentField::getDefaults() - There is no config json file at $file_path");
         }
