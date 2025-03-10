@@ -213,12 +213,12 @@ class FileAttachmentField extends FileField
      */
     protected function defineFieldHolderRequirements()
     {
-        Requirements::javascript(DROPZONE_DIR . '/javascript/dropzone.js');
-        Requirements::javascript(DROPZONE_DIR . '/javascript/file_attachment_field.js');
+        Requirements::javascript('_resources/vendor/unclecheese/'.DROPZONE_DIR . '/javascript/dropzone.js');
+        Requirements::javascript('_resources/vendor/unclecheese/'.DROPZONE_DIR . '/javascript/file_attachment_field.js');
         if ($this->isCMS()) {
-            Requirements::javascript(DROPZONE_DIR . '/javascript/file_attachment_field_backend.js');
+            Requirements::javascript('_resources/vendor/unclecheese/'.DROPZONE_DIR . '/javascript/file_attachment_field_backend.js');
         }
-        Requirements::css(DROPZONE_DIR . '/css/file_attachment_field.css');
+        Requirements::css('_resources/vendor/unclecheese/'.DROPZONE_DIR . '/css/file_attachment_field.css');
 
         if (!$this->getSetting('url')) {
             $this->settings['url'] = $this->Link('upload');
